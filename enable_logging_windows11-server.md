@@ -6,7 +6,7 @@ $ auditpol /set /category:"Logon/Logoff" /success:enable /failure:enable
 ```
 ## ✅ Verify:
 ```
-auditpol /get /category:"Logon/Logoff"
+$ auditpol /get /category:"Logon/Logoff"
 ```
 ## Why this matters for Wazuh
 •	Wazuh agent collects Windows Event Logs via the <localfile> configuration in ossec.conf.
@@ -17,10 +17,10 @@ auditpol /get /category:"Logon/Logoff"
 ## 💡 Optional: Enable other useful security logs
 •	Account Management:
 ```
-auditpol /set /category:"Account Management" /success:enable /failure:enable
+$ auditpol /set /category:"Account Management" /success:enable /failure:enable
 ```
 •	Policy Change:
 ```
-auditpol /set /category:"Policy Change" /success:enable /failure:enable
+$ auditpol /set /category:"Policy Change" /success:enable /failure:enable
 ```
 •	This ensures Wazuh can detect user creation, privilege changes, and security policy changes.
