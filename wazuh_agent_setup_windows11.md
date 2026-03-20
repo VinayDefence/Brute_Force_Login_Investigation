@@ -1,14 +1,14 @@
-🔌 PHASE 3 — CONNECT WINDOWS TO WAZUH
-✅ On Windows 11
+##🔌 PHASE 3 — CONNECT WINDOWS TO WAZUH
+## On Windows 11
 
-Install Agent
+## Install Agent
 
 Download:
 
 https://packages.wazuh.com/4.x/windows/wazuh-agent.msi
 from web browser
 
-During Install:
+## During Install:
 •	Manager IP → Ubuntu IP
 
 •key → leave as balnk 
@@ -20,12 +20,12 @@ Enter A → add agent (e.g win 11)
 Enter E → slecet the win 11 ID then its will shown the key 
 Copy that key and add it into the wazuh agent interface
 
-Start Agent
+## Start Agent
 Open PowerShell (Admin):
 
 NET START WazuhSvc
 
-Verify in Dashboard
+## Verify in Dashboard
 Go: ubuntu wazuh manager
 Wazuh → Agents
 👉 Status must be:
