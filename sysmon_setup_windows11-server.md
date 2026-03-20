@@ -18,4 +18,4 @@ $ sysmon64.exe -i
 ```
 $ sc query sysmon64
 ```
-! [Verification](sysmon verify.png)
+! [Verification](C:\Defensive Projects\Brute_Force_Login_Investigation\screenshots\sysmon verify.png)
