@@ -1,6 +1,6 @@
-📊 PHASE 4 — SYSMON
+## 📊 PHASE 4 — SYSMON
 
-👉 Run on BOTH Windows machines
+## 👉 Run on BOTH Windows machines
 
 ## Download
 
