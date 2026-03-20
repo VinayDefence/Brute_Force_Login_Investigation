@@ -1,4 +1,4 @@
-##🔌 PHASE 3 — CONNECT WINDOWS TO WAZUH
+## 🔌 PHASE 3 — CONNECT WINDOWS TO WAZUH
 ## On Windows server
 
 ## Install Agent
