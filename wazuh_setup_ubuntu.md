@@ -1,4 +1,4 @@
-#  Phase 1: Ubuntu Lab Setup
+# PHASE 1: UBUNTU LAB SETUP 
 
 ## Install Wazuh
 
@@ -26,7 +26,9 @@ sudo systemctl enable wazuh-dashboard
 
 sudo systemctl status wazuh-manager
 
+
 # PHASE 2 — ACCESS WAZUH
+
 Open browser:
 
 https://<UBUNTU_IP>
