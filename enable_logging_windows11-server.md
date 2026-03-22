@@ -31,3 +31,20 @@ $ auditpol /set /category:"Policy Change" /success:enable /failure:enable
 
 
 •	This ensures Wazuh can detect user creation, privilege changes, and security policy changes.
+
+## ⚙️ Step 2: Configure Wazuh Agent (windows11 & server)
+
+Edit the configuration file:
+
+```
+$ C:\Program Files (x86)\ossec-agent\ossec.conf
+```
+
+Add:
+```
+<localfile>
+  <location>Security</location>
+  <log_format>eventchannel</log_format>
+</localfile>
+```
+👉 This allows Wazuh to collect Windows Security Event Logs
