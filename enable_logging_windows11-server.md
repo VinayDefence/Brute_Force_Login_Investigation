@@ -1,4 +1,4 @@
-## 📊 PHASE 4 — ENABLE LOGGING (VERY IMPORTANT)
+# 📊 PHASE 4 — ENABLE LOGGING (VERY IMPORTANT)
 ## 👉 Run on BOTH Windows machines (11 and server)
 ## Open PowerShell (Admin):
 ```
@@ -8,6 +8,8 @@ $ auditpol /set /category:"Logon/Logoff" /success:enable /failure:enable
 ```
 $ auditpol /get /category:"Logon/Logoff"
 ```
+![Enable-logging](screenshots/enable_logon_logoff.png)
+
 ## Why this matters for Wazuh
 •	Wazuh agent collects Windows Event Logs via the <localfile> configuration in ossec.conf.
 
@@ -23,4 +25,9 @@ $ auditpol /set /category:"Account Management" /success:enable /failure:enable
 ```
 $ auditpol /set /category:"Policy Change" /success:enable /failure:enable
 ```
+### Ater that check the Account Management & Policy change Status
+
+![Enable-Account&Policy](screenshots/Account_policy.png)
+
+
 •	This ensures Wazuh can detect user creation, privilege changes, and security policy changes.
