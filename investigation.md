@@ -2,7 +2,7 @@
 
 ## 🔍 Analysis Results
 
-- **Attacker IP:** 192.168.0.86 
+- **Attacker IP:** 192.168.0.86
 - **Target Account:** Administrator  
 - **Number of Attempts:** High volume of failed login attempts detected  
 - **Successful Login:** Yes
