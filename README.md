@@ -55,7 +55,7 @@ $ medusa -h 192.168.0.165 -u Administrator -P passwords.txt -M rdp
 $ nxc smb 192.168.0.165 -u Administrator -P /usr/share/wordlists/rockyou.txt --igonre-pw-decoding
 ```
 
-![Attack](PASTE_YOUR_RAW_IMAGE_LINK_2_HERE)
+![Attack](screenshots/wazuh_hydra_rdp_smb.ping)
 
 ---
 
